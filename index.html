@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Ahmat Alkher MAHAMAT - Développeur Full-Stack Junior">
+    <meta name="author" content="Ahmat Alkher MAHAMAT">
+    <title>Ahmat Alkher | Développeur Full-Stack</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 15px 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #667eea;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        section:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #333;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #667eea;
+            margin: 10px auto 0;
+        }
+
+        /* Projets */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            margin: 0;
+        }
+
+        .project-card .tech {
+            padding: 10px 15px;
+            background: #f0f0f0;
+            font-size: 0.85rem;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .project-card p {
+            padding: 15px;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin: 0 15px 15px 15px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Compétences */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category ul li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Contact */
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #764ba2;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background: #333;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ahmat Alkher MAHAMAT</h1>
+            <p>Développeur Full-Stack Junior</p>
+            <div class="badge">🔐 Site sécurisé HTTPS | 🚀 Hébergement GitHub Pages</div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Accueil -->
+        <section id="accueil">
+            <h2>À propos</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+                Titulaire d'une Licence en Informatique spécialité Développement d'Applications (UCAO - UUT), 
+                je suis passionné par le développement web, mobile et les bases de données. 
+                Je recherche une opportunité professionnelle pour mettre mes compétences au service de projets innovants.
+            </p>
+        </section>
+
+        <!-- Projets -->
+        <section id="projets">
+            <h2>Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>📊 Analyse des ventes</h3>
+                    <div class="tech">Python, Flask, SQLite, Pandas, Matplotlib</div>
+                    <p>Application d'analyse statistique et visualisation de données pour l'aide à la décision.</p>
+                    <a href="https://github.com/Alkher03" target="_blank">Voir sur GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>📚 BiblioTech UCAO</h3>
+                    <div class="tech">Laravel, MySQL, Bootstrap</div>
+                    <p>Application web complète pour la gestion des livres et des emprunts en bibliothèque.</p>
+                    <a href="https://github.com/Alkher03" target="_blank">Voir sur GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>🏨 Gestion d'hôtel</h3>
+                    <div class="tech">Java, POO, UML</div>
+                    <p>Application de gestion des réservations, clients et facturation.</p>
+                    <a href="https://github.com/Alkher03" target="_blank">Voir sur GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>🛒 Site E-commerce</h3>
+                    <div class="tech">WordPress, WooCommerce</div>
+                    <p>Site marchand complet avec gestion de produits et paiements intégrés.</p>
+                    <a href="https://github.com/Alkher03" target="_blank">Voir sur GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>🔧 Gestion de Quincaillerie</h3>
+                    <div class="tech">VB.Net, Windows Forms</div>
+                    <p>Application de suivi des stocks, ventes et achats.</p>
+                    <a href="https://github.com/Alkher03" target="_blank">Voir sur GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>🌡️ Gestion de température</h3>
+                    <div class="tech">C, Java</div>
+                    <p>Lecture et analyse de données simulées de capteurs.</p>
+                    <a href="https://github.com/Alkher03" target="_blank">Voir sur GitHub →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences -->
+        <section id="competences">
+            <h2>Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>💻 Langages</h3>
+                    <ul>
+                        <li>Dart, Java, JavaScript, Python</li>
+                        <li>PHP, SQL, VB.Net</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🗄️ Bases de données</h3>
+                    <ul>
+                        <li>MySQL, Oracle, SQLite</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🌐 Web & Mobile</h3>
+                    <ul>
+                        <li>HTML5, CSS3, PHP, XML</li>
+                        <li>Flutter (UI/UX, API REST)</li>
+                        <li>Android Studio</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🔒 Sécurité & Réseaux</h3>
+                    <ul>
+                        <li>Cryptographie, Sécurité informatique</li>
+                        <li>Administration réseaux, Cloud Computing</li>
+                        <li>Microsoft Server</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🛠️ Outils & Méthodes</h3>
+                    <ul>
+                        <li>Git/GitHub, VS Code</li>
+                        <li>UML, Merise, Design Patterns</li>
+                        <li>Génie logiciel, Gestion de projets</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>📚 Langues</h3>
+                    <ul>
+                        <li>Français (Maternelle)</li>
+                        <li>Anglais (B2)</li>
+                        <li>Arabe (Maternelle)</li>
+                        <li>Turc (B1)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Me contacter</h2>
+            <div class="contact-info">
+                <p>📧 <a href="mailto:mahamat.ahmat.alkher@gmail.com">mahamat.ahmat.alkher@gmail.com</a></p>
+                <p>📞 +235 66 55 70 45</p>
+                <p>📍 Tchad</p>
+                <div class="social-links">
+                    <a href="https://github.com/Alkher03" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ahmat-alkher-mahamat-4b5092260/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ahmat Alkher MAHAMAT - Portfolio sécurisé hébergé sur GitHub Pages</p>
+        </div>
+    </footer>
+</body>
+</html>
